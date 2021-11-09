@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="userlist.css">
+  <script src="https://kit.fontawesome.com/b5499296d3.js" crossorigin="anonymous"></script>
+  <title>User List</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <!--  Navbar  -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">User List</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/userlist.html"><i class="fas fa-home"></i></a>
+          </li>
+        </ul>
+        <!-- search form -->
+        <form class="form-inline my-2 my-lg-0" id="search-form">
+          <input class="form-control mr-sm-2" type="search" placeholder="Keyword" aria-label="Search" id="search-input">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-submit-button">Search</button>
+          <div class="invalid-feedback">Keyword cannot be null!</div>
+        </form>
+      </div>
+    </nav>
+    <!--   Render User List -->
+    <div class="row justify-content-center" id="data-panel">
+      <!--         <div class="card col-sm-2 mt-3" style="width: 12rem;">
+        <img class="card-img-top mt-3" src="https://randomuser.me/api/portraits/men/88.jpg" alt="User Avatar" data-toggle="modal" data-target="#userModal">
+        <div class="card-body">
+          <h5 class="card-title">Guillaume Vincent</h5>
+        </div>
+      </div> -->
+    </div>
+    <!--   Modal -->
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="user-modal-title" id="user-modal-title">Guillaume Vincent</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="user-modal-body">
+            <!-- <ul>
+              <li id="user-modal-age">Age: 25</li>
+              <li id="user-modal-region">region: CH</li>
+              <li id="user-modal-gender">gender: male</li>
+              <li id="user-modal-birthday">birthday: 1995-05-05</li>
+              <li id="user-modal-email">email: guillaume.vincent@example.com</li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  Pagination -->
+    <div class="pagination mt-3  justify-content-center">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination" id="paginator">
+          <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./userlist.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
